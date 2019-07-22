@@ -1,0 +1,24 @@
+h1{
+  font-family: sans-serif;
+  color: #006fde;
+}
+
+body{
+  background-color: #ededed;
+  text-align: center;
+}
+
+.sitebtn{
+  color: #171717;
+  background-color: #d1d1d1;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-radius: 15px
+}
+
+.sidebtn:hover{
+  border: 10px solid black;
+
+}
