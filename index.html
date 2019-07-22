@@ -6,19 +6,29 @@
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css?family=Lato|Montserrat" rel="stylesheet">
     <script src="main.js" type="text/javascript"></script>
-    <script type="text/javascript" src="ashs.json"></script>
   </head>
   <body onload="load()">
-    <div class="wrapper">  
+    <div class="wrapper">
 
-      <div class="hehe">
-        <h2>ASHS</h2>
-      </div>
-      <div class="haha">
-        <h2>Mahu</h2>
-      </div>
-      <div class="box">
+      <div class="options">
+        <div class="options-wrapper">
+          <button onclick="changeDay(0)" id="dayButton0" class="dayButton">M</button><!--
+       --><button onclick="changeDay(1)" id="dayButton1" class="dayButton">T</button><!--
+       --><button onclick="changeDay(2)" id="dayButton2" class="dayButton">W</button><!--
+       --><button onclick="changeDay(3)" id="dayButton3" class="dayButton">T</button><!--
+       --><button onclick="changeDay(4)" id="dayButton4" class="dayButton">F</button>
+          <button onclick="checkBox(1)" id="weekButton1" class="dayButton activeDayButton">Week 1</button><!--
+       --><button onclick="checkBox(2)" id="weekButton2" class="dayButton">Week 2</button>
+
+       </div><!--
+      --></div><!--
+      --><div class="box">
+
+
         <div class="left">
+          <div class="hehe">
+            <h2>ASHS</h2>
+          </div>
           <div id="ashsEarly">
 
           </div>
@@ -44,6 +54,9 @@
           </div>
         </div><!-- Left Box -->
         <div class="right">
+          <div class="haha">
+                  <h2>Mahu</h2>
+                </div>
           <div id="mahuP1" class="cube"> <!-- P1 -->
             <h4>P1 - Subject here</h4>
             <h5>8:45am - 9:50am</h5>
@@ -68,7 +81,7 @@
             <h4>Lunch</h4>
             <h5>1:10pm - 2:00pm</h5>
           </div>
-          <div id="mahuPCT" class="cube"> <!-- P1 -->
+          <div id="mahuPCT" class="cube pct"> <!-- P1 -->
             <h4>PCT</h4>
             <h5>2:00pm - 2:20pm</h5>
           </div>
@@ -80,7 +93,7 @@
       </div>
     </div>
 
-    <button onclick="myFunction()">Click me</button>
+
     <p id="demo"></p>
   </body>
 </html>

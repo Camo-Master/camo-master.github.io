@@ -2,23 +2,29 @@
 font-family: 'Lato', sans-serif;
 font-family: 'Montserrat', sans-serif;
 */
+/* Ho */
+h2{
+  margin:10px;
+}
 .wrapper{
   display: grid;
   grid-template-columns: 4fr 4fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "hehe haha"
-    "box box";
+    "options options"
+    "box box"; /*    "hehe haha"*/
     grid-gap: 3px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-}/*
+}
+/*
 .left{grid-area:logo;}
 .right{grid-area:banner;*/
 .hehe{grid-area:hehe;}
 .haha{grid-area:haha;}
 .box{grid-area:box;}
+.options{grid-area:options}
 
 body{
   font-family: 'Montserrat', sans-serif;
@@ -27,9 +33,7 @@ body{
 .box{
   padding: 5px;
   background-color: #f9f9f9;
-  border-style: solid;
-  border-width: 0.5px;
-  border-color: black;
+  border: 0.5px solid black;
   height: 80vh;
   overflow-y: scroll;
 }
@@ -88,3 +92,52 @@ body{
 
 .break{background-color: #3f3f3f;}
 .break:hover{background-color: #606060;-webkit-transition: .4s;}
+
+.assembly, .pct, .tutorial, .arcade{background-color: #00b5b5;}
+.assembly:hover, .pct:hover, .tutorial:hover, .arcade:hover{background-color: #00c1c1;}
+
+.hehe, .haha{
+  text-align:center;
+}
+
+.options{
+  text-align: center;
+  height: 50px;
+
+
+}
+
+#dayButton0{border-top-left-radius: 5px;border-bottom-left-radius: 5px;}
+#dayButton4{border-top-right-radius: 5px;border-bottom-right-radius: 5px;}
+
+
+
+.dayButton{
+  color: #3a3a3a;
+  background-color: #5495ff;
+  border: 0;
+  margin-left: 0;
+  padding: 10px;
+  display:inline ;
+  font-size: 20px;
+  cursor: pointer;
+  min-width: 50px;
+}
+.dayButton:focus{outline:0;}
+
+.activeDayButton{
+  background-color: #2175ff;
+}
+#weekButton1{
+  border-top-left-radius: 5px;border-bottom-left-radius: 5px;
+  min-width: 100px;
+}
+#weekButton2{
+  border-top-right-radius: 5px;border-bottom-right-radius: 5px;
+  min-width: 100px;
+}
+
+.boxSpacer{
+
+
+}
