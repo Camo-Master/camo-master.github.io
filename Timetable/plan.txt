@@ -1,0 +1,19 @@
+const people {
+  person: {
+    school: "" ,
+    subjects: ["day1-p1", "day1-p2"]
+}}
+
+const schools {
+  school: {
+    days: 5,
+    repeats: 0,
+    timetable: ["8:45", "9:50", "10:50", "11:10"],
+}
+}
+
+
+Make program display time slots
+Make program add lesson names
+Add all schools
+Add ability to swap between
