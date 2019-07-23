@@ -30,3 +30,5 @@ Make program display time slots
 Make program add lesson names
 Add all schools
 Add ability to swap between
+
+https://stackoverflow.com/questions/5677799/how-to-append-data-to-div-using-javascript
