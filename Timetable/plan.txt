@@ -9,8 +9,21 @@ const schools {
     days: 5,
     repeats: 0,
     timetable: ["8:45", "9:50", "10:50", "11:10"],
+    timeGaps: [45, 65, 60, 20, 60, 60, 50, 20, 60]
+    names: ["B4", "Period 1", "Period 2", "Interval", "Period 3", "Period 4", "Lunch", "Whanau", "Period 5"]
 }
 }
+
+const subjects {
+  subject: "",
+  colour: "",
+  colour2: ""
+}
+
+Height of slot Minutes*3 in px
+8am-4pm
+1/2 slots down left 150 px apart
+8*150 = 1200
 
 
 Make program display time slots
