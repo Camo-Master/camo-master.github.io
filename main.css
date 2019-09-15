@@ -1,24 +1,61 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700|Roboto:400,700&display=swap');
 h1{
-  font-family: sans-serif;
-  color: #006fde;
+  font-family: 'Raleway', sans-serif;
+  color: #61892F;
+  font-size:1.6em;
+  font-weight: bold;
 }
 
+h2{
+  font-family: 'Raleway', sans-serif;
+  font-size:2em;
+  color: #fff;
+  font-weight: normal;
+}
+
+.main-title{
+  margin-bottom: 0px;
+}
+
+.main-title h1{
+  margin-bottom: 0px;
+}
+
+.main-title h2{
+  margin-top: 10px;
+}
+
+
+
 body{
-  background-color: #ededed;
+  background-color: #222629;
   text-align: center;
+
+
 }
 
 .sitebtn{
-  color: #171717;
-  background-color: #d1d1d1;
+  color: #dedede;
+  background-color: #86c232;
   padding: 10px 20px;
   text-decoration: none;
   font-family: sans-serif;
   font-weight: bold;
-  border-radius: 15px
+  border-radius: 15px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .sidebtn:hover{
   border: 10px solid black;
 
+}
+
+
+.WallyImage{
+  width: 70%
+}
+
+
+#rolled{
+  visibility: hidden;
 }
