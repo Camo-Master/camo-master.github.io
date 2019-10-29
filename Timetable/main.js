@@ -1,5 +1,6 @@
 let people;
 let schools;
+let subjects;
 
 let timetableWrapper;
 
@@ -9,6 +10,9 @@ $(document).ready(function(){
   $.getJSON('info.json', function(data){
     people = data.people;
     schools = data.schools;
+    subjects = data.subjects;
+
+    console.log(subjects);
 
     defaultValues();
 
@@ -43,7 +47,20 @@ function defaultValues(){
 }
 
 function loadColours(){
+  let subjectList = Object.keys(subjects);
+
   let styleString = "";
+
+  for(k=0; k < subjectList.length; k++){
+    styleString = styleString + `
+    .subject${subjectList[k]}{background-color: #${BackgroundColour};}
+    .science:hover{background-color: #${Hover Colour};-webkit-transition: .4s;}`
+
+  }
+
+
+
+
 }
 
 function loadDays(selected){

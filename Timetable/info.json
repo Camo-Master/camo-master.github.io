@@ -30,8 +30,30 @@
       "subjects": ["Maths", "Textiles", "Painting", "English", "Science", "DVC", "Whanau", "Assembly"]
     }
   },
-
   "subjects": {
-
+    "Spanish":{
+      "colour": "f538ff",
+      "Hover-Colour": "f659ffs"
+    },
+    "Maths":{
+      "colour": "428aff",
+      "Hover-Colour": "5896fc"
+    },
+    "English":{
+      "colour": "1cd85d",
+      "Hover-Colour": "34d36b"
+    },
+    "Digi":{
+      "colour": "ff6e2b",
+      "Hover-Colour": "ff7f44"
+    },
+    "History":{
+      "colour": "f93b3b",
+      "Hover-Colour": "ff5959"
+    },
+    "Science":{
+      "colour": "9e66ff",
+      "Hover-Colour": "a87bf7"
+    }
   }
 }
