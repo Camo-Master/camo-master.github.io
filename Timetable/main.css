@@ -9,8 +9,20 @@ font-family: 'Montserrat', sans-serif;
 body{
   font-family: 'Montserrat', sans-serif;
   background-color: black;
+}
 
+#controls{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding: 20px;
+}
 
+#controls>select{
+  width: 200px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 .lessonBox{
