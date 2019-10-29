@@ -28,21 +28,23 @@ $(document).ready(function(){
 function defaultValues(){
   let personList = Object.keys(people);
 
-
+  //set the values of the person list select
   for(i=0; i<personList.length; i++){
     let option = $(`<option value="${personList[i]}"></option>`).text(personList[i]);
     if(personList[i] == "Ben"){
       option.attr("selected", "");
     }
-
-
     $('#personChoice').append(option);
-
   }
+
+  //load tings
   loadTimes("Ben", 0);
   loadDays(0);
 }
 
+function loadColours(){
+  let styleString = "";
+}
 
 function loadDays(selected){
   $("#dayChoice").html('');
@@ -68,7 +70,7 @@ function loadTimes(person, day){
     let lesson = school.lines[day][i];
 
     lessonBox = document.createElement("div");
-    lessonBox.setAttribute('class', 'lessonBox');
+    lessonBox.setAttribute('class', `lessonBox subject${person.subjects[lesson-1]}`);
     lessonBox.setAttribute('style', `height:${timeArray[i]*3-5}px;`);
 
     textBox = document.createElement("div");
