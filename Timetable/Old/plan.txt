@@ -32,3 +32,8 @@ Add all schools
 Add ability to swap between
 
 https://stackoverflow.com/questions/5677799/how-to-append-data-to-div-using-javascript
+https://javascript.info/modifying-document
+
+<<<<<<< HEAD
+=======
+>>>>>>> bcd376bb07c0a4ac8930b5ca40789cd69116b7d9
