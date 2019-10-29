@@ -1,7 +1,7 @@
 {
   "schools": {
     "Mahurangi College": {
-      "days": 5,
+      "days": 10,
       "repeats": 0,
       "timeGaps": [45, 65, 60, 20, 60, 60, 50, 20, 60],
       "lessonNames": ["Before School", "Period 1", "Period 2", "Interval", "Period 3", "Period 4", "Lunch", "Whanau", "Period 5"],
