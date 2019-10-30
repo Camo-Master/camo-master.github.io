@@ -12,6 +12,7 @@ let name = "${name}";
 
 $( document ).ready(function() {
   formElements = [$('#line1'), $('#line2'), $('#line3'), $('#line4'), $('#line5'), $('#line6')];
+  let continueButton = $('#continueButton');
   $.getJSON('./../info.json', function(data){
     people = data.people;
     schools = data.schools;
@@ -144,7 +145,7 @@ function updateOutput(){
     validError = "Enter all 6 subjects and a Name to continue!";
   }
 
-  let continueButton = $('#continueButton')
+ 
   if(validError == ""){
     continueButton.text("Thank you, Click this button to copy!");
     continueButton.addClass('continueButtonEnabled');
@@ -163,6 +164,7 @@ function copyForDiscord() {
   copyToClipboard(`\`\`\`json
 ${outputString}
 \`\`\``);
+  continueButton.css("border-style", "green");
 }
 
 function checkDupesTest(a) {
