@@ -90,7 +90,6 @@ function loadTimes(person, day){
   for(i = 0; i < timeArray.length; i++){
     let lesson = school.lines[day][i];
 
-
     lessonBox = document.createElement("div");
     lessonBox.setAttribute('style', `height:${timeArray[i]*3-5}px;`);
 
@@ -106,9 +105,7 @@ function loadTimes(person, day){
 
 
     textBox.innerHTML = textBoxString + `<br>Length: ${timeArray[i]} Minutes`;
-
     lessonBox.appendChild(textBox);
-
     timetableWrapper.append(lessonBox);
   }
 }
