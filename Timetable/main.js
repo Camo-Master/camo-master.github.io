@@ -52,14 +52,18 @@ function loadColours(){
 
   let styleString = "";
 
-
-
   for(k=0; k < subjectList.length; k++){
     let subject = subjectList[k];
-    styleString = `${styleString} .subject${subject}{background-color: #${subjects[subject][colour]};}
-    .science:hover{background-color: #${subjects[subject].hoverColour};-webkit-transition: .4s;}`
+    let subjectClassName = classFormat(subject);
+
+
+
+    styleString = `${styleString} .subject${subjectClassName}{background-color: #${subjects[subject].colour};}
+    .subject${subjectClassName}:hover{background-color: #${subjects[subject].hoverColour};-webkit-transition: .4s;}`
   }
-  console.log(styleString);
+  let styles = $(`<style></style>`).html(styleString);
+  $('head').append(styles);
+
 }
 
 
@@ -86,15 +90,18 @@ function loadTimes(person, day){
   for(i = 0; i < timeArray.length; i++){
     let lesson = school.lines[day][i];
 
+
     lessonBox = document.createElement("div");
-    lessonBox.setAttribute('class', `lessonBox subject${person.subjects[lesson-1]}`);
     lessonBox.setAttribute('style', `height:${timeArray[i]*3-5}px;`);
 
     textBox = document.createElement("div");
     let textBoxString = `<b>${school.lessonNames[i]}:</b>`;
 
     if(lesson !== "N"){
+      lessonBox.setAttribute('class', `lessonBox subject${classFormat(person.subjects[lesson-1])}`);
       textBoxString = `<b>${school.lessonNames[i]}:</b> ${person.subjects[lesson-1]}`;
+    }else{
+      lessonBox.setAttribute('class', `lessonBox subject${classFormat(school.lessonNames[i])}`);
     }
 
 
@@ -103,8 +110,11 @@ function loadTimes(person, day){
     lessonBox.appendChild(textBox);
 
     timetableWrapper.append(lessonBox);
-
-
-
   }
+}
+
+
+function classFormat(str){
+  let replaced = str.split(' ').join('_').toLowerCase();
+  return replaced;
 }

@@ -54,6 +54,26 @@
     "Science":{
       "colour": "9e66ff",
       "hoverColour": "a87bf7"
+    },
+    "Before School":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Assembly":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Interval":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Lunch":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Whanau":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
     }
   }
 }
