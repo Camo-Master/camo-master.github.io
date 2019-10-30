@@ -38,6 +38,16 @@
         margin: 0;
       }
 
+      #continueButton{
+        margin: 10px;
+        padding: 10px;
+        width: 50%;
+        font-size: 1.1em;
+      }
+
+      .continueButtonDisabled{cursor: not-allowed;}
+      .continueButtonEnabled{cursor:pointer;}
+
       .formGood{
         background-color: #44e233;
       }
@@ -77,11 +87,13 @@
       <select id="line5" onchange="updatedValue(5)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br><br>
 
       <span>What do you have Period 5 on Day <b>2</b>?</span><br>
-      <select id="line6" onchange="updatedValue(6)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br><br>
+      <select id="line6" onchange="updatedValue(6)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br>
+
+      <button id="continueButton" class="continueButtonDisabled" type="button" name="button">Enter all 6 subjects and a Name to continue!</button>
 
       <div class="jsonDiv">
         <p id="jsonOutput">
-          ${name}": { <br>
+          "${name}": { <br>
             &emsp;"school": "Mahurangi College", <br>
             &emsp;"subjects": [ <br>
             &emsp;&emsp;"${line1Subject}", <br>

@@ -74,6 +74,42 @@
     "Whanau":{
       "colour": "00b5b5",
       "hoverColour": "00c1c1"
+    },
+    "Art Painting":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "DVC":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Textiles":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Media":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Drama":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Hospitality":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Geography":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Business":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
+    },
+    "Art Design":{
+      "colour": "00b5b5",
+      "hoverColour": "00c1c1"
     }
   }
 }

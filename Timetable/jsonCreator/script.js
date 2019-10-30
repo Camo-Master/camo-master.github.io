@@ -112,14 +112,13 @@ function populateSelects(){
 }
 
 function updateOutput(){
-  outputString = `
-      "${name}": {
+  outputString = `"${name}": {
         "school": "Mahurangi College",
         "subjects": ["${currentSelects[0]}", "${currentSelects[1]}", "${currentSelects[2]}", "${currentSelects[3]}", "${currentSelects[4]}", "${currentSelects[5]}", "Whanau", "Assembly"]
       },`;
 
   let htmlOutput = `
-  ${name}": { <br>
+  "${name}": { <br>
     &emsp;"school": "Mahurangi College", <br>
     &emsp;"subjects": [ <br>
     &emsp;&emsp;"${currentSelects[0]}", <br>
@@ -135,12 +134,35 @@ function updateOutput(){
 
   $('#jsonOutput').html(htmlOutput);
 
-
+  let validError = "";
   if(checkDupesTest(currentSelects) && blankValueTest()){
-    console.log("succsess");
-  }else {
-    console.log('fail');
+    //check for name nameField
+    if(name == "${name}"){
+      validError = "Enter a valid Name to continue!";
+    }
+  }else{
+    validError = "Enter all 6 subjects and a Name to continue!";
   }
+
+  let continueButton = $('#continueButton')
+  if(validError == ""){
+    continueButton.text("Thank you, Click this button to copy!");
+    continueButton.addClass('continueButtonEnabled');
+    continueButton.removeClass('continueButtonDisabled');
+    continueButton.attr('onClick', 'copyForDiscord()')
+  }else{
+    continueButton.text(validError);
+    continueButton.attr('onClick', '')
+    continueButton.removeClass('continueButtonEnabled');
+    continueButton.addClass('continueButtonDisabled');
+  }
+
+}
+
+function copyForDiscord() {
+  copyToClipboard(`\`\`\`json
+${outputString}
+\`\`\``);
 }
 
 function checkDupesTest(a) {
