@@ -44,6 +44,7 @@ function defaultValues(){
   //load tings
   loadTimes("Ben", 0);
   loadDays(0);
+  loadColours()
 }
 
 function loadColours(){
@@ -51,17 +52,16 @@ function loadColours(){
 
   let styleString = "";
 
+
+
   for(k=0; k < subjectList.length; k++){
-    styleString = styleString + `
-    .subject${subjectList[k]}{background-color: #${BackgroundColour};}
-    .science:hover{background-color: #${Hover Colour};-webkit-transition: .4s;}`
-
+    let subject = subjectList[k];
+    styleString = `${styleString} .subject${subject}{background-color: #${subjects[subject][colour]};}
+    .science:hover{background-color: #${subjects[subject].hoverColour};-webkit-transition: .4s;}`
   }
-
-
-
-
+  console.log(styleString);
 }
+
 
 function loadDays(selected){
   $("#dayChoice").html('');
