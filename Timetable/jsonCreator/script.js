@@ -4,12 +4,14 @@ let subjects;
 
 let outputString;
 
+let formElements;
+
 let currentSelects = ["${line1Subject}", "${line2Subject}", "${line3Subject}", "${line4Subject}", "${line5Subject}", "${line6Subject}"];
 
 let name = "${name}";
 
 $( document ).ready(function() {
-
+  formElements = [$('#line1'), $('#line2'), $('#line3'), $('#line4'), $('#line5'), $('#line6')];
   $.getJSON('./../info.json', function(data){
     people = data.people;
     schools = data.schools;
@@ -28,10 +30,13 @@ $( document ).ready(function() {
       console.log(nameStr);
       nameInput.removeClass('formBad');
       nameInput.addClass('formGood');
+      name = nameStr;
     }else{
       nameInput.addClass('formBad');
       nameInput.removeClass('formGood');
+      name = "${name}";
     }
+    updateOutput();
 
   })
 });
@@ -105,6 +110,7 @@ function populateSelects(){
   }
 
 }
+
 function updateOutput(){
   outputString = `
       "${name}": {
@@ -128,4 +134,42 @@ function updateOutput(){
   },`;
 
   $('#jsonOutput').html(htmlOutput);
+
+
+  if(checkDupesTest(currentSelects) && blankValueTest()){
+    console.log("succsess");
+  }else {
+    console.log('fail');
+  }
+}
+
+function checkDupesTest(a) {
+  var counts = [];
+  for(var i = 0; i <= a.length; i++) {
+      if(counts[a[i]] === undefined) {
+          counts[a[i]] = 1;
+      }else{
+          return false;
+      }
+  }
+  return true;
+}
+
+function blankValueTest(){
+  for(i=0; i<6; i++){
+    if(currentSelects[i].includes('${')){
+      return false;
+    }
+  }
+  return true;
+}
+
+
+function copyToClipboard(text) {
+    var dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
 }
