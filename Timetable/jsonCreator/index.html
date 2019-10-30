@@ -3,33 +3,100 @@
   <head>
     <meta charset="utf-8">
     <title>Information Addition</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="script.js"></script>
     <style media="screen">
-      body{}
+
+
+      .wrapper{
+        margin: 0 auto;
+        width: 80%;
+        text-align: center;
+        font-family: sans-serif;
+      }
+
+      .jsonDiv{
+        margin: 0 auto;
+        padding: 10px;
+        border: 2px black solid;
+        border-radius: 10px;
+        width: 50%;
+      }
+
+      .wrapper > span{
+        font-size: 20px;
+
+      }
+
+      .wrapper > select, .wrapper > input{
+        width: 200px;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px black solid;
+        font-size: 15px;
+      }
+
+
+      #jsonOutput{
+        text-align: left;
+      }
+
+      .formGood{
+        background-color: #44e233;
+      }
+
+      .formBad{
+        background-color: #ff4242;
+      }
 
 
     </style>
   </head>
   <body>
-    <h1>What Subjects Do you take?</h1>
-    <h2>Please Fill in the information below</h2>
+    <div class="wrapper">
+      <h1>What Subjects Do you take?</h1>
+      <h2>Please Fill in the information below</h2>
 
-    <span>What do you have Period 1 on Day 1?</span><br>
-    <select id="line2" class="subjectChoice"></select><br>
+      <span>Enter yout First name</span><br>
+      <input type="text" placeholder="First Name"><br><br>
 
-    <span>What do you have Period 2 on Day 1?</span><br>
-    <select id="line1" class="subjectChoice"></select><br>
+      <span>What do you have Period 1 on Day 1?</span><br>
+      <select id="line2" onchange="updatedValue(2)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br><br>
 
-    <span>What do you have Period 3 on Day 1?</span><br>
-    <select id="line3" class="subjectChoice"></select><br>
+      <span>What do you have Period 2 on Day 1?</span><br>
+      <select id="line1" onchange="updatedValue(1)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br><br>
 
-    <span>What do you have Period 4 on Day 1?</span><br>
-    <select id="line4" class="subjectChoice"></select><br>
+      <span>What do you have Period 3 on Day 1?</span><br>
+      <select id="line3" onchange="updatedValue(3)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br><br>
 
-    <span>What do you have Period 5 on Day 1?</span><br>
-    <select id="line5" class="subjectChoice"></select><br>
+      <span>What do you have Period 4 on Day 1?</span><br>
+      <select id="line4" onchange="updatedValue(4)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br><br>
 
-    <span>What do you have Period 5 on Day <b>2<b>?</span><br>
-    <select id="line6" class="subjectChoice"></select><br>
+      <span>What do you have Period 5 on Day 1?</span><br>
+      <select id="line5" onchange="updatedValue(5)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br><br>
+
+      <span>What do you have Period 5 on Day <b>2</b>?</span><br>
+      <select id="line6" onchange="updatedValue(6)" class="subjectChoice"> <option disabled selected value="no">Choose a subject</option> </select><br><br>
+
+      <div class="jsonDiv">
+        <p id="jsonOutput">
+          ${name}": { <br>
+            &emsp;"school": "Mahurangi College", <br>
+            &emsp;"subjects": [ <br>
+            &emsp;&emsp;"${line1Subject}", <br>
+            &emsp;&emsp;"${line2Subject}", <br>
+            &emsp;&emsp;"${line3Subject}", <br>
+            &emsp;&emsp;"${line4Subject}", <br>
+            &emsp;&emsp;"${line5Subject}", <br>
+            &emsp;&emsp;"${line6Subject}", <br>
+            &emsp;&emsp;"Whanau", <br>
+            &emsp;&emsp;"Assembly"<br>
+          &emsp;]<br>
+          },
+        </div>
+      </div>
+    </div>
+
 
   </body>
 </html>

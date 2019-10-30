@@ -5,6 +5,7 @@ let subjects;
 let timetableWrapper;
 
 
+
 $(document).ready(function(){
   timetableWrapper = $('#timetableWrapper');
   $.getJSON('info.json', function(data){
