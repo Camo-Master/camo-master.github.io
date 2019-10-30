@@ -4,15 +4,9 @@ let subjects;
 
 let outputString;
 
-let currentSelects = ["", "", "", "", "", ""];
+let currentSelects = ["${line1Subject}", "${line2Subject}", "${line3Subject}", "${line4Subject}", "${line5Subject}", "${line6Subject}"];
 
 let name = "${name}";
-let line1Subject = "${line1Subject}";
-let line2Subject = "${line2Subject}";
-let line3Subject = "${line3Subject}";
-let line4Subject = "${line4Subject}";
-let line5Subject = "${line5Subject}";
-let line6Subject = "${line6Subject}";
 
 $( document ).ready(function() {
 
@@ -25,28 +19,53 @@ $( document ).ready(function() {
 
     populateSelects();
   });
+
+  let nameInput = $('#nameField');
+  nameInput.focusout( () => {
+    if(nameInput.val() !== ""){
+      let nameStr = nameInput.val();
+      nameStr.replace( /(<([^>]+)>)/ig, '');
+      console.log(nameStr);
+      nameInput.removeClass('formBad');
+      nameInput.addClass('formGood');
+    }else{
+      nameInput.addClass('formBad');
+      nameInput.removeClass('formGood');
+    }
+
+  })
 });
 
 function updatedValue(lineNo){
-  let newVal = $(`#line${lineNo}`).val();
+  let currElement = $(`#line${lineNo}`);
+  let newVal = currElement.val();
+
+  if(currentSelects.includes(newVal)){
+    currElement.addClass('formBad');
+    currElement.removeClass('formGood');
+  }else{
+    currElement.removeClass('formBad');
+    currElement.addClass('formGood');
+  }
+
   switch (lineNo) {
     case 1:
-      line1Subject = newVal;
+      currentSelects[0] = newVal;
       break;
     case 2:
-      line2Subject = newVal;
+      currentSelects[1] = newVal;
       break;
     case 3:
-      line3Subject = newVal;
+      currentSelects[2] = newVal;
       break;
     case 4:
-      line4Subject = newVal;
+      currentSelects[3] = newVal;
       break;
     case 5:
-      line5Subject = newVal;
+      currentSelects[4] = newVal;
       break;
     case 6:
-      line6Subject = newVal;
+      currentSelects[5] = newVal;
       break;
     default:
   }
@@ -90,19 +109,19 @@ function updateOutput(){
   outputString = `
       "${name}": {
         "school": "Mahurangi College",
-        "subjects": ["${line1Subject}", "${line2Subject}", "${line3Subject}", "${line4Subject}", "${line5Subject}", "${line6Subject}", "Whanau", "Assembly"]
+        "subjects": ["${currentSelects[0]}", "${currentSelects[1]}", "${currentSelects[2]}", "${currentSelects[3]}", "${currentSelects[4]}", "${currentSelects[5]}", "Whanau", "Assembly"]
       },`;
 
   let htmlOutput = `
   ${name}": { <br>
     &emsp;"school": "Mahurangi College", <br>
     &emsp;"subjects": [ <br>
-    &emsp;&emsp;"${line1Subject}", <br>
-    &emsp;&emsp;"${line2Subject}", <br>
-    &emsp;&emsp;"${line3Subject}", <br>
-    &emsp;&emsp;"${line4Subject}", <br>
-    &emsp;&emsp;"${line5Subject}", <br>
-    &emsp;&emsp;"${line6Subject}", <br>
+    &emsp;&emsp;"${currentSelects[0]}", <br>
+    &emsp;&emsp;"${currentSelects[1]}", <br>
+    &emsp;&emsp;"${currentSelects[2]}", <br>
+    &emsp;&emsp;"${currentSelects[3]}", <br>
+    &emsp;&emsp;"${currentSelects[4]}", <br>
+    &emsp;&emsp;"${currentSelects[5]}", <br>
     &emsp;&emsp;"Whanau", <br>
     &emsp;&emsp;"Assembly"<br>
     &emsp;]<br>
