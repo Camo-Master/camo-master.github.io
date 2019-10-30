@@ -112,10 +112,10 @@ function populateSelects(){
 }
 
 function updateOutput(){
-  outputString = `"${name}": {
-        "school": "Mahurangi College",
-        "subjects": ["${currentSelects[0]}", "${currentSelects[1]}", "${currentSelects[2]}", "${currentSelects[3]}", "${currentSelects[4]}", "${currentSelects[5]}", "Whanau", "Assembly"]
-      },`;
+  outputString = `    "${name}": {
+      "school": "Mahurangi College",
+      "subjects": ["${currentSelects[0]}", "${currentSelects[1]}", "${currentSelects[2]}", "${currentSelects[3]}", "${currentSelects[4]}", "${currentSelects[5]}", "Whanau", "Assembly"]
+    },`;
 
   let htmlOutput = `
   "${name}": { <br>
