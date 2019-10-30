@@ -2,6 +2,8 @@ let people;
 let schools;
 let subjects;
 
+let continueButton;
+
 let outputString;
 
 let formElements;
