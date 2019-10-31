@@ -14,7 +14,7 @@ let name = "${name}";
 
 $( document ).ready(function() {
   formElements = [$('#line1'), $('#line2'), $('#line3'), $('#line4'), $('#line5'), $('#line6')];
-  let continueButton = $('#continueButton');
+  continueButton = $('#continueButton');
   $.getJSON('./../info.json', function(data){
     people = data.people;
     schools = data.schools;
