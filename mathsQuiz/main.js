@@ -14,8 +14,7 @@ function questionAnswered(answer){
     question.innerHTML = "Correct!";
     questionNumber += 1;
   }else{
-    document.body.innerHTML = "<span class=\"loserMessage\">You Lost the Game!</span>"
-    questionNumber += 1;
+    location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
   }
 
   if(questionNumber > 2){
