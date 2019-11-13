@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Math Test</title>
+    <link rel="stylesheet" href="main.css">
   </head>
   <body>
     <div class="container">
-      <h1>Question</h1>
-      <h2 id="question"></h2>
-      <button type="button" class="answerButton" id="buttonTrue"  onClick="answer(true);">True</button>
-      <button type="button" class="answerButton" id="buttonFalse" onClick="answer(false);">false</button>
+      <h1 id="question">Question</h1>
+      <button type="button" class="answerButton" id="buttonTrue"  onClick="questionAnswered(true);">True</button>
+      <button type="button" class="answerButton" id="buttonFalse" onClick="questionAnswered(false);">false</button>
     </div>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>

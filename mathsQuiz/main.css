@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+.answerButton{
+  height: 300px;
+  width: 30%
+}
+
+.container{
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#question{
+  font-size: 30px;
+  margin: 0 0 10px 0 ;
+  font-family: 'Roboto', sans-serif;
+}
+
+.loserMessage{
+  font-size: 10em;
+  color: #0366fc;
+  font-family: 'Roboto', sans-serif;
+}
+body{
+  text-align: center;
+}
