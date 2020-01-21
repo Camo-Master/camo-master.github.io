@@ -15,7 +15,8 @@ let peopleList = [
   {"name": "Ben", "id": 0},
   {"name": "Nick", "id": 1},
   {"name": "Bread", "id": 2},
-  {"name": "Marizanne", "id": 3}
+  //{"name": "Marizanne", "id": 3}
+  {"name": "Mystery Person", "id": 3}
 ];
 
 
@@ -127,7 +128,7 @@ $(document).ready(function(){
   }
   //table.append(tr);
 
-  openTab("line1Tab");
+  openTab("welcomeTab");
 
   for(let i = 1; i <= 6;i++){
     let parentDiv = $(`#line${i}Tab`);
@@ -149,6 +150,12 @@ $(document).ready(function(){
     }
   }
   changedHash();
+
+  $("#giveLink").hover( function() {
+    $("#giveGif").show();
+  }, function(){
+    $("#giveGif").hide();
+  });
 });
 
 
@@ -178,14 +185,13 @@ function openTab(tab) {
 function changedHash(){
   console.log("change hash");
   let newHash = location.hash.toLowerCase();
-  newHash = newHash.substr(1);
+  newHash = decodeURIComponent(newHash.substr(1));
   let person = peopleList.find(({name}) => name.toLowerCase() == newHash);
   if(person){
     for(i=1;i <= 6; i++){
       let currLine = classes[`line${i}Classes`];
       for(let j in currLine){
         let toSetText = "Line " + i;
-        console.log(j);
         if(currLine[j].People.includes(person.id)){
           $('.line' + i).text(j);
 
