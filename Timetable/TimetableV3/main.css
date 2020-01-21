@@ -1,20 +1,20 @@
 html{
   font-family: Arial;
-
 }
 
 table{
   border-collapse: collapse;
   text-align: center;
   display: inline-block;
+  width: 100%;
 }
 
-table, th, td{
+th, td{
   border: 1px black solid;
 }
 
 td, th{
-  width: 100px;
+  min-width: 100px;
   height: 30px;
 }
 
@@ -28,6 +28,10 @@ td{
   cursor: pointer;
 }
 
+.tableWrapper{
+  display:inline-block;
+  border: 0;
+}
 
 /* .infoPanel > button{
   background-color: red;
@@ -91,4 +95,30 @@ td{
 }
 .tabcontent ul{
   margin-top: 5px;
+}
+
+
+@media screen and (max-width: 1830px) {
+  .infoPanel{
+    display: block;
+    position: absolute;
+    margin: 10px;
+    margin-left: 0;
+  }
+  .tableWrapper{
+    overflow-x: auto;
+    display: block;
+    border: 1px black solid;
+    border-top: 0;
+    border-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 678px){
+  .tablinks{
+    display: block;
+    margin: 0;
+    padding: 12px 0;
+    width: 25%;
+  }
 }

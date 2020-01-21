@@ -124,16 +124,8 @@ $(document).ready(function(){
       tr.append(lesson)
     }
     table.append(tr);
-
   }
-
-  // tr = $("<tr> </tr>");
-  // tr.append($(`<td>Period ${0}</td>`));
-  // for(j of timtableFormat){
-  //   tr.append(`<td>Line ${j[0]}</td>`)
-  // }
-
-  table.append(tr);
+  //table.append(tr);
 
   openTab("line1Tab");
 
@@ -156,9 +148,7 @@ $(document).ready(function(){
       parentDiv.append(element, element2, peopleElement);
     }
   }
-
   changedHash();
-
 });
 
 
@@ -191,10 +181,7 @@ function changedHash(){
   newHash = newHash.substr(1);
   let person = peopleList.find(({name}) => name.toLowerCase() == newHash);
   if(person){
-
     for(i=1;i <= 6; i++){
-      // $('.line' + i);
-
       let currLine = classes[`line${i}Classes`];
       for(let j in currLine){
         let toSetText = "Line " + i;

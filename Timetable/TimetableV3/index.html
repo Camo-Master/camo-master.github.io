@@ -2,6 +2,8 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Timetable</title>
     <link rel="stylesheet" href="main.css">
     <script src="jquery.min.js"></script>
@@ -10,8 +12,8 @@
     <style id="highlightLineStyle"></style>
   </head>
   <body onhashchange="changedHash()">
-    <table id="timetable">
-    </table>
+    <div class="tableWrapper"><table id="timetable">
+    </table></div>
     <div class="infoPanel">
       <button class="tablinks" id="welcomeTabLink" onclick="openTab('welcomeTab')">Welcome</button><!--
       --><button class="tablinks" id="line1TabLink" onclick="openTab('line1Tab')">Line 1</button><!--
