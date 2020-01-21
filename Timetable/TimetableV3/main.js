@@ -1,15 +1,61 @@
 let timtableFormat = [
-  [1, 2, 3, 4, 5],
-  [6, 1, 2, 3, 4],
-  [5, 7, 6, 1, 2],
-  [3, 4, 5, 6, 1],
-  [2, 3, 4, 5, 6],
   [5, 4, 3, 2, 1],
   [4, 3, 2, 1, 6],
   [2, 7, 1, 6, 5],
   [1, 6, 5, 4, 3],
-  [6, 5, 4, 3, 2]
+  [6, 5, 4, 3, 2],
+  [1, 2, 3, 4, 5],
+  [6, 1, 2, 3, 4],
+  [5, 7, 6, 1, 2],
+  [3, 4, 5, 6, 1],
+  [2, 3, 4, 5, 6]
 ]
+
+let classes = {
+  "line1Classes": {
+    "Physics" : {
+      "Teacher" : "Mr Yates",
+      "Class": "K8",
+      "People": ["Ben"]
+    }
+  },
+ "line2Classes" : {
+    "Chemistry" : {
+      "Teacher" : "Mrs Caldwell ",
+      "Class": "K3",
+      "People": ["Ben"]
+    }
+  },
+ "line3Classes" : {
+    "Biology" : {
+      "Teacher" : "Mrs Moran",
+      "Class": "K1",
+      "People": ["Ben"]
+    }
+  },
+ "line4Classes" : {
+    "Maths" : {
+      "Teacher" : "Mrs Light",
+      "Class": "B15",
+      "People": ["Ben"]
+    }
+  },
+ "line5Classes" : {
+    "English" : {
+      "Teacher" : "Mrs Ruland",
+      "Class": "E8",
+      "People": ["Ben"]
+    }
+  },
+  "line6Classes" : {
+    "Digi Tech" : {
+      "Teacher" : "Mr Schnetler",
+      "Class": "B13",
+      "People": ["Ben", "Nick", "Bread"]
+    }
+  }
+};
+
 
 
 $(document).ready(function(){
