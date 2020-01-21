@@ -17,7 +17,7 @@ let classes = {
       "Teacher" : "Mr Yates",
       "Class": "K8",
       "People": ["Ben"]
-    }
+    },
   },
  "line2Classes" : {
     "Chemistry" : {
@@ -87,6 +87,7 @@ $(document).ready(function(){
       let lineNo = j[i];
       let lesson = $(`<td>Line ${lineNo}</td>`);
       lesson.attr("class", "line"+lineNo);
+      lesson.attr("onclick", `openTab('line${lineNo}Tab')`);
       tr.append(lesson)
     }
     table.append(tr);
@@ -101,8 +102,25 @@ $(document).ready(function(){
 
   table.append(tr);
 
+  openTab("line1Tab");
 
-  openTab("welcomeTab");
+  for(let i = 1; i <= 6;i++){
+    let parentDiv = $(`#line${i}Tab`);
+    let lineData = classes[`line${i}Classes`];
+    let subjects = Object.keys(lineData);
+    console.log(subjects);
+    for(o of subjects){
+      let subject = lineData[o];
+      let element = $('<h2></h2>').text(o);
+      let element2 = $('<h4></h4>').text(`${subject.Teacher} | ${subject.Class}`);
+      let peopleElement = $("<ul></ul>");
+      for(p of subject.People){
+        peopleElement.append($('<li></li>').text(p));
+      }
+      parentDiv.append(element, element2, peopleElement);
+    }
+  }
+
 });
 
 
@@ -121,4 +139,9 @@ function openTab(tab) {
   console.log(tab);
   document.getElementById(tab).style.display = "block";
   document.getElementById(tab+"Link").className += " active";
+  if(tab[5] == "T"){
+    $('#highlightLineStyle').text(`.line${tab[4]}{background-color: rgba(242, 228, 22, 0.41);}`);
+  }else{
+    $('#highlightLineStyle').text('');
+  }
 }

@@ -18,9 +18,14 @@ td, th{
   height: 30px;
 }
 
+td:hover{
+  background-color: #ddd;
+  transition: .3s;
+}
 
 td{
   height: 60px;
+  cursor: pointer;
 }
 
 
@@ -75,4 +80,15 @@ td{
 .tabcontent {
   display: none;
   padding: 6px 12px;
+}
+
+.tabcontent h2{
+  margin-bottom: 5px;
+  font-size:
+}
+.tabcontent h4{
+  margin: 0;
+}
+.tabcontent ul{
+  margin-top: 5px;
 }
