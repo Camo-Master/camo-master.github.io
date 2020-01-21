@@ -214,9 +214,3 @@ function changedHash(){
     }
   }
 }
-
-function resetLines(){
-  for(let i=1;i <= 6; i++){
-    $('.line' + i).text("Line " + i);
-  }
-}
