@@ -16,11 +16,9 @@ function questionAnswered(answer){
   }else{
     location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ');
   }
-
   if(questionNumber > 2){
     document.body.innerHTML = "<span class=\"loserMessage\">You Lost the Game!</span>"
   }else{
     setTimeout(function(){ question.innerHTML = questions[questionNumber]; }, 2000);
   }
-
 }

@@ -57,8 +57,6 @@ function loadColours(){
     let subject = subjectList[k];
     let subjectClassName = classFormat(subject);
 
-
-
     styleString = `${styleString} .subject${subjectClassName}{background-color: #${subjects[subject].colour};}
     .subject${subjectClassName}:hover{background-color: #${subjects[subject].hoverColour};-webkit-transition: .4s;}`
   }
