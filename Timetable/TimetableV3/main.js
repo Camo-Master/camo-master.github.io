@@ -11,53 +11,85 @@ let timtableFormat = [
   [2, 3, 4, 5, 6]
 ]
 
+let peopleList = [
+  {"name": "Ben", "id": 0},
+  {"name": "Nick", "id": 1},
+  {"name": "Bread", "id": 2},
+  {"name": "Marizanne", "id": 3}
+];
+
+
 let classes = {
   "line1Classes": {
     "Physics" : {
       "Teacher" : "Mr Yates",
       "Class": "K8",
-      "People": ["Ben"]
+      "People": [0]
     },
+    "Chemistry" : {
+      "Teacher" : "Mrs Caldwell ",
+      "Class": "B3",
+      "People": [3]
+    }
   },
  "line2Classes" : {
     "Chemistry" : {
-      "Teacher" : "Mrs Caldwell ",
+      "Teacher" : "Mrs Caldwell",
       "Class": "K3",
-      "People": ["Ben"]
+      "People": [0]
+    },
+    "Drama" : {
+      "Teacher" : "Mr Dutton",
+      "Class": "DRA",
+      "People": [3]
     }
   },
  "line3Classes" : {
     "Biology" : {
       "Teacher" : "Mrs Moran",
       "Class": "K1",
-      "People": ["Ben"]
+      "People": [0, 3]
     }
   },
  "line4Classes" : {
     "Maths" : {
       "Teacher" : "Mrs Light",
       "Class": "B15",
-      "People": ["Ben"]
+      "People": [0]
+    },
+    "English" : {
+      "Teacher" : "CRO",
+      "Class": "E1",
+      "People": [3]
     }
   },
  "line5Classes" : {
     "English" : {
       "Teacher" : "Mrs Ruland",
       "Class": "E8",
-      "People": ["Ben"]
+      "People": [0]
+    },
+    "Media" : {
+      "Teacher" : "Mr King",
+      "Class": "A2",
+      "People": [3]
     }
   },
   "line6Classes" : {
     "Digi Tech" : {
       "Teacher" : "Mr Schnetler",
       "Class": "B13",
-      "People": ["Ben", "Nick", "Bread"]
+      "People": [0, 1, 2]
+    },
+    "Maths" : {
+      "Teacher" : "Mr Welch",
+      "Class": "B6",
+      "People": [3]
     }
   }
 };
 
 
-let peopleArray = [];
 
 $(document).ready(function(){
 
@@ -116,11 +148,16 @@ $(document).ready(function(){
       let element2 = $('<h4></h4>').text(`${subject.Teacher} | ${subject.Class}`);
       let peopleElement = $("<ul></ul>");
       for(p of subject.People){
-        peopleElement.append($('<li></li>').text(p));
+        let anchor = $('<a></a>');
+        anchor.attr("href", "#"+peopleList[p].name);
+        anchor.text(peopleList[p].name)
+        peopleElement.append($('<li></li>').append(anchor));
       }
       parentDiv.append(element, element2, peopleElement);
     }
   }
+
+  changedHash();
 
 });
 
@@ -149,5 +186,37 @@ function openTab(tab) {
 
 
 function changedHash(){
+  console.log("change hash");
+  let newHash = location.hash.toLowerCase();
+  newHash = newHash.substr(1);
+  let person = peopleList.find(({name}) => name.toLowerCase() == newHash);
+  if(person){
 
+    for(i=1;i <= 6; i++){
+      // $('.line' + i);
+
+      let currLine = classes[`line${i}Classes`];
+      for(let j in currLine){
+        let toSetText = "Line " + i;
+        console.log(j);
+        if(currLine[j].People.includes(person.id)){
+          $('.line' + i).text(j);
+
+          break;
+        }
+          $('.line' + i).text(toSetText);
+      }
+    }
+    $('.line7').text("Assembly");
+  }else{
+    for(let i=1;i <= 7; i++){
+      $('.line' + i).text("Line " + i);
+    }
+  }
+}
+
+function resetLines(){
+  for(let i=1;i <= 6; i++){
+    $('.line' + i).text("Line " + i);
+  }
 }
