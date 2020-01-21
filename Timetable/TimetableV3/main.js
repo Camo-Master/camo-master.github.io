@@ -57,6 +57,7 @@ let classes = {
 };
 
 
+let peopleArray = [];
 
 $(document).ready(function(){
 
@@ -144,4 +145,9 @@ function openTab(tab) {
   }else{
     $('#highlightLineStyle').text('');
   }
+}
+
+
+function changedHash(){
+
 }
