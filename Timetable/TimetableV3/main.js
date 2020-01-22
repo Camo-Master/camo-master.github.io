@@ -226,7 +226,7 @@ $(document).ready(function(){
     console.log(subjects);
     for(o of subjects){
       let subject = lineData[o];
-      let element = $('<h2></h2>').text(o);
+      let element = $('<h2></h2>').text(`${o} (${subject.Code})`);
       let element2 = $('<h4></h4>').text(`${subject.Teacher} | ${subject.Class}`);
       let peopleElement = $("<ul></ul>");
       for(p of subject.People){
