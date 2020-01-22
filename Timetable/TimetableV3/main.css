@@ -48,6 +48,8 @@ td{
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #FFF;
+
+  max-width: 651px;
 }
 
 
@@ -96,6 +98,16 @@ td{
 .tabcontent ul{
   margin-top: 5px;
 }
+
+.welcomeTitle{
+  margin-bottom: 5px;
+}
+
+.welcomeSubtitle{
+  margin-top: 0;
+}
+
+
 
 @media screen and (max-width: 1830px) {
   .infoPanel{
