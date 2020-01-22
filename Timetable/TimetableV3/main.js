@@ -21,7 +21,8 @@ let peopleList = [
   {"name": "Nathan", "id": 5},
   {"name": "Michaela", "id": 6},
   {"name": "Alex", "id": 7},
-  {"name": "Lexie", "id": 8}
+  {"name": "Lexie", "id": 8},
+  {"name": "Bridie", "id": 9}
 
 ];
 
@@ -49,7 +50,7 @@ let classes = {
     "Maths" : {
       "Teacher" : "Mrs Light ",
       "Class": "B15",
-      "People": [6],
+      "People": [6, 9],
       "Code": "L2MA2"
     }
   },
@@ -57,7 +58,7 @@ let classes = {
     "Chemistry" : {
       "Teacher" : "Mrs Caldwell",
       "Class": "K3",
-      "People": [0, 1, 5],
+      "People": [0, 1, 5, 9],
       "Code": "L2CHE"
     },
     "Drama" : {
@@ -77,7 +78,7 @@ let classes = {
     "Biology" : {
       "Teacher" : "Mrs Moran",
       "Class": "K1",
-      "People": [0, 3, 5],
+      "People": [0, 3, 5, 9],
       "Code": "L2BIO"
     },
     "Design" : {
@@ -113,9 +114,9 @@ let classes = {
       "Code": "L2EN1"
     },
     "Geography " : {
-      "Teacher" : "GIP",
+      "Teacher" : "Mrs Gipps",
       "Class": "A5",
-      "People": [8],
+      "People": [8, 9],
       "Code": "L2GEO"
     }
   },
@@ -123,7 +124,7 @@ let classes = {
     "English" : {
       "Teacher" : "Mrs Ruland",
       "Class": "E8",
-      "People": [0, 1],
+      "People": [0, 1, 9],
       "Code": "L2EN1"
     },
     "Media" : {
@@ -167,7 +168,7 @@ let classes = {
     "Painting" : {
       "Teacher" : "Mrs Maday",
       "Class": "D1",
-      "People": [6],
+      "People": [6, 9],
       "Code": "L2PAI"
     },
     "English" : {
