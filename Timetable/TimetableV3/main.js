@@ -34,7 +34,6 @@ $(document).ready(function(){
   }
   //table.append(tr);
 
-  openTab("welcomeTab");
 
   for(let i = 1; i <= 6;i++){
     let parentDiv = $(`#line${i}Tab`);
@@ -55,6 +54,18 @@ $(document).ready(function(){
       parentDiv.append(element, element2, peopleElement);
     }
   }
+
+  let parentDiv = $(`#PeopleList`);
+  for(i of peopleList){
+    let anchor = $('<a></a>');
+    anchor.attr("href", "#"+i.name);
+    anchor.text(i.name)
+    parentDiv.append($('<li></li>').append(anchor));
+
+  }
+
+
+  openTab("welcomeTab");
   changedHash();
 
   $("#giveLink").hover( function() {

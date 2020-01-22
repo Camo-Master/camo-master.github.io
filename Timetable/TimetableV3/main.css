@@ -107,7 +107,13 @@ td{
   margin-top: 0;
 }
 
+.tabcontent a, .tabcontent a:visited{
+  color: #0000EE;
+}
 
+.peopleListTitle{
+  margin-bottom: 5px;
+}
 
 @media screen and (max-width: 1830px) {
   .infoPanel{
