@@ -37,15 +37,13 @@ $(document).ready(function(){
 
   for(let i = 1; i <= 6;i++){
     let parentDiv = $(`#line${i}Tab`);
-    let lineData = classes[`line${i}Classes`];
-    let subjects = Object.keys(lineData);
+    let subjects = classes[`line${i}Classes`];
     console.log(subjects);
     for(o of subjects){
-      let subject = lineData[o];
-      let element = $('<h2></h2>').text(`${o} (${subject.Code})`);
-      let element2 = $('<h4></h4>').text(`${subject.Teacher} | ${subject.Class}`);
+      let element = $('<h2></h2>').text(`${o.Name} (${o.Code})`);
+      let element2 = $('<h4></h4>').text(`${o.Teacher} | ${o.Class}`);
       let peopleElement = $("<ul></ul>");
-      for(p of subject.People){
+      for(p of o.People){
         let anchor = $('<a></a>');
         anchor.attr("href", "#"+peopleList[p].name);
         anchor.text(peopleList[p].name)
@@ -107,10 +105,10 @@ function changedHash(){
   if(person){
     for(i=1;i <= 6; i++){
       let currLine = classes[`line${i}Classes`];
-      for(let j in currLine){
+      for(let j of currLine){
         let toSetText = "Line " + i;
-        if(currLine[j].People.includes(person.id)){
-          $('.line' + i).text(j);
+        if(j.People.includes(person.id)){
+          $('.line' + i).text(j.Name);
 
           break;
         }
