@@ -32,7 +32,7 @@ let classes = {
     "Physics" : {
       "Teacher" : "Mr Yates",
       "Class": "K8",
-      "People": [0, 1, 4],
+      "People": [0, 1, 2, 4],
       "Code": "L2PHY"
     },
     "Chemistry" : {
@@ -72,6 +72,12 @@ let classes = {
       "Class": "K5",
       "People": [4, 7],
       "Code": "L2BIO"
+    },
+    "Tech" : {
+      "Teacher" : "Mr Lenihan",
+      "Class": "T1",
+      "People": [2],
+      "Code": "L2TEC"
     }
   },
  "line3Classes" : {
@@ -84,7 +90,7 @@ let classes = {
     "Design" : {
       "Teacher" : "Mr Pulsford",
       "Class": "D4/5",
-      "People": [1, 6],
+      "People": [1, 2, 6],
       "Code": "L2DES"
     },
     "Graphics" : {
@@ -104,7 +110,7 @@ let classes = {
     "Maths" : {
       "Teacher" : "Mrs Light",
       "Class": "B15",
-      "People": [0, 1],
+      "People": [0, 1, 2],
       "Code": "L2MA1"
     },
     "English" : {
@@ -144,6 +150,12 @@ let classes = {
       "Class": "B1",
       "People": [5],
       "Code": "L2MA1"
+    },
+    "English" : {
+      "Teacher" : "JES",
+      "Class": "E9",
+      "People": [2],
+      "Code": "L2EN1"
     }
   },
   "line6Classes" : {
