@@ -44,11 +44,9 @@ td{
   margin-left: 20px;
   display: inline-block;
   position: absolute;
-
   overflow: hidden;
   border: 1px solid #ccc;
   background-color: #FFF;
-
   max-width: 651px;
 }
 
