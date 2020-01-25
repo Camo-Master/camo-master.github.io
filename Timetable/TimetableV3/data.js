@@ -297,7 +297,7 @@ let classes = {
       "Name": "English",
       "Teacher" : "CRO",
       "Class": "E1",
-      "People": [0, 4],
+      "People": [],
       "Code": "L2EN2"
     }
   ]
