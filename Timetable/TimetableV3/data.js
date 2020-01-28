@@ -14,14 +14,14 @@ let timtableFormat = [
 
 let peopleList = [
   {"name": "Ben", "id": 0},
-  {"name": "*Nick", "id": 1},
-  {"name": "*Bread", "id": 2},
+  {"name": "Nick", "id": 1},
+  {"name": "Bread", "id": 2},
   {"name": "*Marizanne", "id": 3},
   {"name": "Gretel", "id": 4},
   {"name": "Nathan", "id": 5},
-  {"name": "*Michaela", "id": 6},
+  {"name": "Michaela", "id": 6},
   {"name": "Alex", "id": 7},
-  {"name": "*Lexie", "id": 8},
+  {"name": "Lexie", "id": 8},
   {"name": "Bridie", "id": 9},
   {"name": "*Jessica", "id": 10},
   {"name": "*Gina", "id": 11},
@@ -42,14 +42,14 @@ let classes = {
       "Name": "Physics",
       "Teacher" : "Mr Yates",
       "Class": "K8",
-      "People": [0],
+      "People": [0, 1],
       "Code": "L2PHY"
     },
     {
       "Name": "Chemistry",
       "Teacher" : "Mrs Caldwell ",
       "Class": "K3",
-      "People": [4, 7, 12, 14],
+      "People": [2, 4, 7, 8, 12, 14],
       "Code": "L2CHE"
     },
     {
@@ -63,7 +63,7 @@ let classes = {
       "Name": "Maths",
       "Teacher" : "Mrs Light ",
       "Class": "B15",
-      "People": [9],
+      "People": [6, 9],
       "Code": "L2MA2"
     },
     {
@@ -93,14 +93,14 @@ let classes = {
       "Name": "Chemistry",
       "Teacher" : "Mrs Caldwell",
       "Class": "K3",
-      "People": [0, 5],
+      "People": [0, 1],
       "Code": "L2CHE"
     },
     {
       "Name": "Drama",
       "Teacher" : "Mr Dutton",
       "Class": "DRA",
-      "People": [12, 13, 14],
+      "People": [6, 8, 12, 13, 14],
       "Code": "L2DRA"
     },
     {
@@ -114,7 +114,7 @@ let classes = {
       "Name": "Tech",
       "Teacher" : "Mr Lenihan",
       "Class": "T1",
-      "People": [],
+      "People": [2],
       "Code": "L2TEC"
     },
     {
@@ -137,7 +137,7 @@ let classes = {
       "Name": "Design",
       "Teacher" : "Mr Pulsford",
       "Class": "D4/5",
-      "People": [],
+      "People": [1, 2, 6],
       "Code": "L2DES"
     },
     {
@@ -151,7 +151,7 @@ let classes = {
       "Name": "Maths",
       "Teacher" : "BUK",
       "Class": "B3",
-      "People": [7],
+      "People": [7, 8],
       "Code": "L2MA1"
     },
     {
@@ -188,21 +188,21 @@ let classes = {
       "Name": "Maths",
       "Teacher" : "Mrs Light",
       "Class": "B15",
-      "People": [14],
+      "People": [1, 2, 14],
       "Code": "L2MA1"
     },
     {
       "Name": "English",
       "Teacher" : "CRO",
       "Class": "E1",
-      "People": [0, 4, 5, 7, 13],
+      "People": [0, 4, 5, 6, 7, 13],
       "Code": "L2EN1"
     },
      {
       "Name": "Geography",
       "Teacher" : "Mrs Gipps",
       "Class": "A5",
-      "People": [9],
+      "People": [8, 9],
       "Code": "L2GEO"
     },
     {
@@ -218,14 +218,14 @@ let classes = {
       "Name": "English",
       "Teacher" : "Mrs Ruland",
       "Class": "E8",
-      "People": [],
+      "People": [1, 2],
       "Code": "L2EN1"
     },
     {
       "Name": "Media",
       "Teacher" : "Mr King",
       "Class": "A2",
-      "People": [7, 12, 14],
+      "People": [6, 7, 8, 12, 14],
       "Code": "L2MED"
     },
     {
@@ -262,7 +262,7 @@ let classes = {
       "Name": "Digi Tech",
       "Teacher" : "Mr Schnetler",
       "Class": "B13",
-      "People": [0],
+      "People": [0, 1, 2],
       "Code": "L2DIT"
     },
     {
@@ -283,14 +283,14 @@ let classes = {
       "Name": "Painting",
       "Teacher" : "Mrs Maday",
       "Class": "D1",
-      "People": [9],
+      "People": [6, 9],
       "Code": "L2PAI"
     },
     {
       "Name": "English",
       "Teacher" : "Mr Shield",
       "Class": "E2",
-      "People": [12],
+      "People": [8, 12],
       "Code": "L2EN1"
     },
     {
