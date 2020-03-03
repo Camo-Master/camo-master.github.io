@@ -113,6 +113,46 @@ td{
   margin-bottom: 5px;
 }
 
+
+/* Styleing the classes */
+
+.classContainer{
+  background-color: #1CB5FF;
+  padding: 5px 0 20px 20px;
+  border-radius: 15px;
+  margin-top: 10px;
+}
+
+.classContainer:hover{
+  background-color: #45C1FF;
+  transition: 0.1s;
+}
+
+.classContainer a:hover{
+  background-color: #0E66E8;
+}
+
+.classContainer a{
+  padding: 7px;
+  background-color: #0A7AB3;
+  color: #fff;
+  border-radius: 9px;
+  text-decoration: none;
+  /* margin: 15px 0; */
+  margin-right: 2px;
+}
+
+.classContainer a:visited{
+  color: #fff;
+}
+
+.classContainer div{
+  margin-top: 15px;
+
+}
+
+
+/* Responsiveness */
 @media screen and (max-width: 1830px) {
   .infoPanel{
     display: block;

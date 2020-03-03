@@ -40,16 +40,18 @@ $(document).ready(function(){
     let subjects = classes[`line${i}Classes`];
     console.log(subjects);
     for(o of subjects){
+      let classDiv = $('<div></div>').attr('class', 'classContainer');
       let element = $('<h2></h2>').text(`${o.Name} (${o.Code})`);
       let element2 = $('<h4></h4>').text(`${o.Teacher} | ${o.Class}`);
-      let peopleElement = $("<ul></ul>");
+      let peopleElement = $("<div></div>");
       for(p of o.People){
         let anchor = $('<a></a>');
         anchor.attr("href", "#"+peopleList[p].name);
         anchor.text(peopleList[p].name)
-        peopleElement.append($('<li></li>').append(anchor));
+        peopleElement.append(anchor);
       }
-      parentDiv.append(element, element2, peopleElement);
+      classDiv.append(element, element2, peopleElement);
+      parentDiv.append(classDiv);
     }
   }
 
@@ -77,7 +79,7 @@ $(document).ready(function(){
 
 
 function openTab(tab) {
-  var i, tabcontent, tablinks;
+  let i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
