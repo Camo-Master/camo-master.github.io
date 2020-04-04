@@ -4,18 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown</title>
+    <style>
+        body{
+            font-family:Verdana;
+            text-align: center;
+        }
+
+        #timeRemaining{
+            font-size: 3em;
+            display: block;
+        }
+
+        #endStatement{
+            margin-bottom: 10px;
+        }
+
+        #endSubtitle{
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h2>Countdown till 22nd April at 2359</h2>
-    <span id="timeRemaining"><span id="weeks">?</span> Weeks, <span id="days">?</span> Days, <span id="hours">?</span> Hours, <span id="minutes">?</span> Minutes, <span id="seconds">?</span> Seconds</span>
+    <h1 id="endStatement">Countdown till 22nd April at 2359</h1>
+    <h2 id="endSubtitle">Countdown till 22nd April at 2359</h2>
+
+    <span id="timeRemaining"><span id="weeks">?</span> Weeks, <span id="days">?</span> Days, <span id="hours">?</span> Hours, <wbr><span id="minutes">?</span> Minutes, <wbr><span id="seconds">?</span> Seconds</span>
     <script>
+
+        const appendedMessage = "Exactly 4 Weeks from the beginning of the NZ Coronavirus lockdown."
+        const endDate = new Date(2020, 3, 22, 23, 59, 0, 0);
         let currDate = new Date();
-        let endDate = new Date(2020, 3, 22, 23, 59, 0, 0);
         let seconds = Math.floor((endDate.getTime() - currDate.getTime())/1000);
+        
+
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let suffixs = ["st", "nd", "rd", "th"];
+
+        let endNumber = endDate.getDate()
+        let dayOfMonth;
+
+        if(1 <= endNumber && endNumber <= 3){
+            dayOfMonth = endNumber+suffixs[endNumber-1]
+            
+        }else{
+            dayOfMonth = endNumber+suffixs[3]
+            
+        } 
+
+
+        document.getElementById("endStatement").innerHTML = `Countdown till ${days[endDate.getDay()]} ${dayOfMonth} ${months[endDate.getMonth()]} at ${endDate.getHours()}${endDate.getMinutes()}`;
+        document.getElementById("endSubtitle").innerHTML = appendedMessage;
+
         updateTime()
 
         setInterval(updateTime, 1000)
         function updateTime() {
+            console.log(seconds);
+            
             document.getElementById("seconds").innerHTML = seconds % 60;
             document.getElementById("minutes").innerHTML = Math.floor(seconds/60) % 60;
             document.getElementById("hours").innerHTML = Math.floor(seconds/3600) % 24;
