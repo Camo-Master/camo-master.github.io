@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown</title>
+</head>
+<body>
+    <h2>Countdown till 22nd April at 2359</h2>
+    <span id="timeRemaining"><span id="weeks">?</span> Weeks, <span id="days">?</span> Days, <span id="hours">?</span> Hours, <span id="minutes">?</span> Minutes, <span id="seconds">?</span> Seconds</span>
+    <script>
+        let currDate = new Date();
+        let endDate = new Date(2020, 3, 22, 23, 59, 0, 0);
+        let seconds = Math.floor((endDate.getTime() - currDate.getTime())/1000);
+        updateTime()
+
+        setInterval(updateTime, 1000)
+        function updateTime() {
+            document.getElementById("seconds").innerHTML = seconds % 60;
+            document.getElementById("minutes").innerHTML = Math.floor(seconds/60) % 60;
+            document.getElementById("hours").innerHTML = Math.floor(seconds/3600) % 24;
+            document.getElementById("days").innerHTML = Math.floor(seconds/86400) % 7;
+            document.getElementById("weeks").innerHTML = Math.floor(seconds/604800);
+
+            seconds--;
+
+        }
+
+
+
+
+
+    </script>
+
+</body>
+</html>
